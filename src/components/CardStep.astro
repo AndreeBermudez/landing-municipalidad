@@ -1,0 +1,15 @@
+---
+import type { Step } from '../types/steps'; 
+import { Icon } from 'astro-icon/components';
+interface Props extends Step {}
+const { title, description, icon, color} = Astro.props;
+---
+
+<div class={`flex flex-col gap-y-4 bg-white max-w-full h-auto px-5 py-8 rounded-lg border-s-4 shadow-md`} style={`border-left-color: ${color};`}>
+	<div class='flex items-center gap-2'>
+        <Icon name={icon} size={24} color={color}  />
+		<h3 class="font-semibold text-xl">{title}</h3>
+	</div>
+    <p class='text-[#444D65] text-sm leading-6'>{description}</p>
+    <slot/>
+</div>

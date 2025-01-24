@@ -1,0 +1,26 @@
+---
+import { steps } from '../data/steps';
+import type { Step } from '../types/steps';
+import CardStep from './CardStep.astro';
+import Cost from './Cost.astro';
+
+const dataSteps: Step[] = steps;
+---
+
+<section
+	class='flex flex-col items-center gap-y-6 px-10 py-6 bg-[#F8F8F8] md:px-16 lg:px-24'>
+	<h2 class='text-3xl font-semibold md:text-4xl'>Proceso paso a paso</h2>
+	<div class='flex flex-col gap-y-6'>
+		{
+			dataSteps.map((step) => (
+				<CardStep
+					title={step.title}
+					description={step.description}
+					icon={step.icon}
+					color={step.color}>
+                    {step.costTitle && <Cost costTitle={step.costTitle} cost={step.costs}/>}
+				</CardStep>
+			))
+		}
+	</div>
+</section>

@@ -1,0 +1,20 @@
+---
+import { type Cost } from '../types/steps';
+interface Costos extends Cost {}
+interface Props {
+	costTitle: string;
+	cost?: Costos[];
+}
+const { costTitle, cost } = Astro.props;
+---
+
+<div class='bg-[#F9FAFB] px-3 py-5'>
+	<h3 class='text-sm font-semibold text-[#34353B]'>{costTitle}</h3>
+    <ul class='flex flex-col gap-y-2 mt-2'>
+        {cost?.map((cost) => (
+            <li class='flex justify-between items-center'>
+                <p class='text-[#444D65] text-sm'>{cost.range}</p>
+                <p class='text-[#1F7EBE] text-sm font-semibold'>S/. {cost.price}</p>
+            </li>
+        ))}
+</div>

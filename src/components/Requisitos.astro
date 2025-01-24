@@ -1,0 +1,25 @@
+---
+import { requirements } from '../data/requirements';
+import type { Requirement } from '../types/requirements';
+import Card from './Card.astro';
+
+const dataRequirement: Requirement[] = requirements;
+---
+
+<section
+	class="flex flex-col items-center gap-y-6 px-10 py-6 bg-[#EEEEEE] md:px-16 lg:px-24">
+	<h2 class='text-3xl font-semibold md:text-4xl'>Requisitos</h2>
+	<div
+		class='grid grid-cols-1 justify-items-center  w-full gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-6 xl:grid-cols-3 xl:gap-x-16 '>
+		{
+			dataRequirement.map((requirement) => (
+				<Card
+					title={requirement.title}
+					items={requirement.items}
+					icon={requirement.icon}
+					color={requirement.color}
+				/>
+			))
+		}
+	</div>
+</section>

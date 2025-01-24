@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import Logo from '../assets/logo.png';
+---
+
+<nav class='flex justify-between items-center px-10 py-2 md:px-16 lg:px-24'>
+	<div class='flex gap-1 items-center'>
+		<Image src={Logo} alt='Logo' class='w-auto h-12' />
+		<span class='hidden text-[#1E3FAA] font-semibold sm:block'>
+			MUNICIPALIDAD DE NUEVO CHIMBOTE
+		</span>
+	</div>
+	<button class='p-2 text-sm rounded bg-[#1E3FAA] text-white md:text-base'>
+		Iniciar Trámite
+	</button>
+</nav>
