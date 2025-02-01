@@ -1,4 +1,29 @@
-<section
+<section class="relative overflow-hidden flex flex-col items-center gap-y-4 text-white text-center py-10 px-10 sm:py-14 md:py-16 md:gap-y-5 lg:py-20 lg:gap-y-6">
+    <!-- Imagen de fondo -->
+	<img 
+		src="/src/assets/hero.webp" 
+		alt="Imagen de fondo"
+		class="absolute inset-0 w-full h-full object-cover  z-0"
+		style="object-position: 50% 60%;"
+		fetchpriority={'high'}
+	/>
+    <!-- Overlay para oscurecer la imagen -->
+    <div class="absolute inset-0 bg-[#1E3FAA] opacity-90 z-10"></div>
+    <!-- Contenido sobre la imagen -->
+    <div class="flex flex-col items-center z-20 gap-y-4">
+        <h1 class='text-3xl font-bold md:text-4xl text_hero'>Licencia de Funcionamiento</h1>
+        <p class='max-w-3xl text-sm leading-6 sm:px-16 md:text-base md:px-20 text_hero'>
+            Obtén tu licencia de funcionamiento de forma rápida y sencilla. Sigue
+            nuestros pasos y comienza a operar tu negocio legalmente.
+        </p>
+        <button
+            class='p-2 text-sm rounded bg-white text-[#1E3FAA] font-semibold md:text-base btn_hero hover:scale-105 hover:bg-green-600 hover:text-white transition-transform duration-300'>
+            Iniciar Trámite
+        </button>
+    </div>
+</section>
+
+<!-- <section
 	class='bg-[url("/src/assets/hero.webp")] bg-cover bg-no-repeat bg-[50%_62%] flex flex-col items-center gap-y-4 text-white text-center py-10 px-10 sm:py-14 md:py-16 md:gap-y-5 lg:py-20 lg:gap-y-6 shadow-[inset_0_0_0_1000px_rgba(30,63,170,0.90)] '>
 	<h1 class='text-3xl font-bold md:text-4xl text_hero'>Licencia de Funcionamiento</h1>
 	<p class='max-w-3xl text-sm leading-6 sm:px-16 md:text-base md:px-20 text_hero'>
@@ -9,7 +34,7 @@
 		class='p-2 text-sm rounded bg-white text-[#1E3FAA] font-semibold md:text-base btn_hero hover:scale-105 hover:bg-green-600 hover:text-white transition-transform duration-300'>
 		Iniciar Trámite
 	</button>
-</section>
+</section> -->
 <style>
 	.text_hero {
 		animation: textAnimation 0.8s ease-out;
