@@ -5,7 +5,7 @@ interface Props extends Requirement {}
 const { title, items, icon, color} = Astro.props;
 ---
 
-<div class={`flex flex-col gap-y-4 bg-white max-w-96 h-auto px-5 py-8 rounded-lg border-t-4 shadow-md animation_card hover:scale-105 transition-all duration-300`} style={`border-top-color: ${color};`}>
+<div class={`flex flex-col gap-y-4 bg-white max-w-96 h-auto px-5 py-8 rounded-lg border-t-4 shadow-md animation_card sm:hover:scale-105 sm:transition-all sm:duration-300`} style={`border-top-color: ${color};`}>
 	<div class='flex items-center gap-2'>
         <Icon name={icon} size={24} color={color}  />
 		<h3 class="font-semibold text-xl">{title}</h3>
