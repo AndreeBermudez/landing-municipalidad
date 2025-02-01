@@ -7,4 +7,6 @@ export interface Requirement {
 
 export interface Item {
 	description: string;
+	showIcon?: boolean;
+	className?: string;
 }

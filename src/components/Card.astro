@@ -5,7 +5,7 @@ interface Props extends Requirement {}
 const { title, items, icon, color} = Astro.props;
 ---
 
-<div class={`flex flex-col gap-y-4 bg-white max-w-96 h-auto px-5 py-8 rounded-lg border-t-4 shadow-md`} style={`border-top-color: ${color};`}>
+<div class={`flex flex-col gap-y-4 bg-white max-w-96 h-auto px-5 py-8 rounded-lg border-t-4 shadow-md animation_card hover:scale-105 transition-all duration-300`} style={`border-top-color: ${color};`}>
 	<div class='flex items-center gap-2'>
         <Icon name={icon} size={24} color={color}  />
 		<h3 class="font-semibold text-xl">{title}</h3>
@@ -13,11 +13,34 @@ const { title, items, icon, color} = Astro.props;
 	<ul class="flex flex-col gap-4">
 		{
 			items.map((item) => (
-				<li class='flex items-start gap-2 text-[#444D65] text-sm leading-6'>
-					<Icon name="ChevronRight" size={16} color={color} class="flex-shrink-0 mt-1 mx-1 "/>
-					<span>{item.description}</span>
-				</li>
+			  <li class='flex items-start gap-2 text-[#444D65] text-sm leading-6'>
+				<Icon
+				  name="ChevronRight"
+				  size={16}
+				  color={item.showIcon ? color : 'transparent'}
+				  class="flex-shrink-0 mt-1 mx-1"
+				/>
+				<span class={`${item.className ? item.className : ''}`}>{item.description}</span>
+			  </li>
 			))
-		}
+		  }
 	</ul>
 </div>
+<style>
+	.animation_card {
+		animation: cardAnimation 0.8s ease-out;
+		/* animation-timeline: view();
+        animation-range: entry 10%  contain 10%;
+        animation-fill-mode: both; */
+	}
+	@keyframes cardAnimation {
+		0% {
+			opacity: 0;
+			transform: translateY(80px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+</style>

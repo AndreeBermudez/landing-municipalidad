@@ -5,7 +5,7 @@ interface Props extends Step {}
 const { title, description, icon, color} = Astro.props;
 ---
 
-<div class={`flex flex-col gap-y-4 bg-white max-w-full h-auto px-5 py-8 rounded-lg border-s-4 shadow-md`} style={`border-left-color: ${color};`}>
+<div class={`flex flex-col gap-y-4 bg-white max-w-full h-auto px-5 py-8 rounded-lg border-s-4 shadow-md animation_steps`} style={`border-left-color: ${color};`}>
 	<div class='flex items-center gap-2'>
         <Icon name={icon} size={24} color={color}  />
 		<h3 class="font-semibold text-xl">{title}</h3>
@@ -13,3 +13,21 @@ const { title, description, icon, color} = Astro.props;
     <p class='text-[#444D65] text-sm leading-6'>{description}</p>
     <slot/>
 </div>
+<style>
+	.animation_steps {
+		animation: cardStepAnimation 0.8s ease-out;
+        animation-timeline: view();
+        animation-range: entry 10%  contain 10%;
+        animation-fill-mode: both;
+	}
+	@keyframes cardStepAnimation {
+		0% {
+			opacity: 0;
+			transform: translateX(-80px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+</style>
