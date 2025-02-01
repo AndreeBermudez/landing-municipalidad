@@ -18,7 +18,7 @@ const dataSteps: Step[] = steps;
 					description={step.description}
 					icon={step.icon}
 					color={step.color}>
-                    {step.costTitle && <Cost costTitle={step.costTitle} cost={step.costs}/>}
+                    {step.costs && <Cost costTitle={step.costTitle} adicionalMessage={step.adicionalMessage} cost={step.costs}/>}
 				</CardStep>
 			))
 		}

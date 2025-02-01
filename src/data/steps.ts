@@ -5,47 +5,35 @@ export const steps: Step[] = [
 		title: '1. Dirígete a la municipalidad',
 		color: '#1F7EBE',
 		description:
-			'Acércate a la oficina de desarrollo económico ubicada en Urb. José Carlos Mariátegui Centro Cívico S/N, Nuevo Chimbote, de lunes a viernes, de 8:00 a.m. a 1:00 p.m. y de 2:00 p.m. a 5:00 p.m. y completa el formulario (S/ 100).',
+			'Acércate a la oficina de la Sub Gerencia de Comercio, Licencias y Promoción Empresarial, ubicado en Centro Cívico S/N, Nuevo Chimbote, de lunes a viernes de 8:00 am a 1:00 pm y de 2:00 pm a 4:30 pm y completa los formularios. Recuerda que el personal de comercio y defensa civil de guiaran en este procedimiento.',
 	},
 	{
 		icon: 'Dollar',
 		title: '2. Realiza el pago',
 		color: '#16A34A',
 		description:
-			'Cancela S/ 5.00 por derecho de trámite en la caja de la municipalidad. Guarda el recibo de pago.',
+			'El costo será evaluado por la Subgerencia de Gestión del Riesgo de Desastres y Defensa Civil, en función a la matriz de nivel de riesgo, aprobado por Decreto Supremo Nº 002-2018-PCM y su reglamento.',
+		costTitle: 'Costos según nivel de riesgo:',
+		costs: [
+			{ type: 'Riesgo Bajo', price: 215.60 },
+			{ type: 'Riesgo Medio', price: 384.10 },
+			{ type: 'Riesgo Alto', price: 778.50 },
+			{ type: 'Riesgo Muy Alto', price: 1370.10 },
+		],
+		adicionalMessage: 'El monto incluye derecho de trámite de Licencia e ITSE',
 	},
 	{
 		icon: 'Clipboard',
 		title: '3. Presenta tus documentos',
 		color: '#CF940E',
 		description:
-			'Ve a la mesa de partes del Centro Cívico, ubicada en la misma sede, y entrega los requisitos junto con formulario y el recibo.',
-	},
-	{
-		icon: 'Clock',
-		title: '4. Espera la notificación',
-		color: '#9333EA',
-		description:
-			'Una vez presentada la información, en un plazo máximo de 24 horas, recibirás una notificación al número o correo que registraste en tu solicitud para que continúes el trámite en la oficina de Defensa Civil.',
-	},
-	{
-		icon: 'Building',
-		title: '5. Dirígete a Defensa Civil',
-		color: '#FF0000',
-		description:
-			'Acude a la oficina de Defensa Civil ubicada en Urb. José Carlos Mariátegui Centro Cívico S/N, Nuevo Chimbote, de lunes a viernes de 7:45 a.m. a 03:30 p.m. y cancela en la caja según el tipo de licencia que requieres.',
-		costTitle: 'Costos según tamaño del local',
-		costs: [
-			{ range: 'Hasta 100 m²', price: 145.20 },
-			{ range: 'De 101 a 500 m²', price: 197.56 },
-			{ range: 'Más de 500 m²', price: 559.68 },
-		],
+			'Ingresa por mesa de partes los formatos de solicitud de licencia e inspección técnica de seguridad en edificaciones, constancia de pago. Posterior a ello, recibirás una hoja de trámite del cual podrás realizar seguimiento.',
 	},
 	{
 		icon: 'FileText',
-		title: '6. Obtén tu licencia',
+		title: '4. Obtén tu licencia',
 		color: '#4F46E5',
 		description:
-			'En un plazo de 7 días hábiles, regresa a la oficina de desarrollo económico dentro del horario de atención para recoger tu licencia.',
+			'En un plazo de 2 días hábiles, regresa a la oficina de la Sub Gerencia de Comercio, dentro del horario de atención para recoger tu licencia.',
 	},
 ];

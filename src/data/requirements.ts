@@ -7,14 +7,18 @@ export const requirements: Requirement[] = [
 		color: '#1F7EBE',
 		items: [
 			{
-				description: 'Copia de ficha RUC',
+				description: 'Número de RUC',
 			},
 			{
-				description: 'Copia de DNI (persona natural)',
+				description: 'Título profesional y estar habilitado por el colegio profesional correspondiente, en el caso de servicios relacionados con la salud.',
 			},
 			{
 				description:
-					'Para persona jurídica: Copia de ficha RUC, DNI del representante y declaración jurada',
+					'Vigencia de poder, cuando se trate de personas Jurídicas',
+			},
+			{
+				description:
+					'De ser apoderado, carta poder simple firmada por el poderdante',
 			},
 		],
 	},
@@ -25,15 +29,7 @@ export const requirements: Requirement[] = [
 		items: [
 			{
 				description:
-					'Resolución de la DIRESA para negocios del ámbito salud (boticas, farmacias, veterinarias, centros médicos, laboratorios)',
-			},
-			{
-				description:
-					'Resolución de UGEL y Dirección Regional de Educación para negocios educativos',
-			},
-			{
-				description:
-					'Declaración jurada de contar con la autorización sectorial respectiva en el caso de actividades que, según la Ley 28976, la requieran antes de otorgar la licencia de funcionamiento.',
+					'Contar con autorización sectorial respectiva en los casos de actividades comerciales que según Decreto Supremo Nº 006-2013-PCM, la requieran previo al otorgamiento de la Licencia de Funcionamiento. Como, por ejemplo, para los negocios de boticas o farmacias, se requiere Resolución de la DIRESA; para instituciones educativas, Resolución de DRE-UGEL.',
 			},
 		],
 	},
@@ -48,7 +44,7 @@ export const requirements: Requirement[] = [
 			},
 			{
 				description:
-					'Copia simple de la autorización expedida por el Ministerio de Cultura (Mincul), según la Ley 28296, Ley General del Patrimonio Cultural de la Nación, excepto si el Mincul participó en la remodelación y monitoreo de obras previas a la solicitud de la licencia del local.',
+					'Copia simple de la autorización expedida por el Ministerio de Cultura, conforme a la Ley 28296, Ley General del Patrimonio Cultural de la Nación, excepto en los casos en que el Ministerio de Cultura haya participado en las etapas de remodelación y monitoreo de ejecución de obras previas inmediatas a la solicitud de la licencia del local.',
 			},
 		],
 	},

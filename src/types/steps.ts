@@ -3,11 +3,12 @@ export interface Step {
     title: string;
     color: string;
     description: string;
-    costTitle?: string; 
+    costTitle?: string;
     costs?: Cost[];
+    adicionalMessage?: string;
 }
 
 export interface Cost {
-    range: string;
+    type: string;
     price: number;
   };
