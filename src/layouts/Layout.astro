@@ -1,10 +1,10 @@
 ---
 import '@fontsource-variable/inter';
-import Footer from "../components/Footer.astro";
-import Hero from "../components/Hero.astro";
-import Navbar from "../components/Navbar.astro";
-import Requisitos from "../components/Requisitos.astro";
-import Steps from "../components/Steps.astro";
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Navbar from '../components/Navbar.astro';
+import Requisitos from '../components/Requisitos.astro';
+import Steps from '../components/Steps.astro';
 ---
 
 <!doctype html>
@@ -14,8 +14,18 @@ import Steps from "../components/Steps.astro";
 		<meta name='viewport' content='width=device-width' />
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<!-- Precargar una imagen -->
-		<link rel='preload' href='src/assets/hero_img.webp' as='image' type="image/webp" fetchpriority="high" />
+		<link
+			rel='preload'
+			href='src/assets/hero_img.webp'
+			as='image'
+			type='image/webp'
+			fetchpriority='high'
+		/>
 		<meta name='generator' content={Astro.generator} />
+		<meta
+			name='description'
+			content='Página web para informar sobre el trámite de licencia de funcionamiento en la Municipalidad de Nuevo Chimbote.'
+		/>
 		<title>Trámite de Licencia</title>
 	</head>
 	<body>
