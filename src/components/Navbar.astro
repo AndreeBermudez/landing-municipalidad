@@ -1,6 +1,10 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.webp';
+---
 <nav class='flex justify-between items-center px-10 py-2 md:px-16 lg:px-24'>
 	<div class='flex gap-1 items-center'>
-		<img src='/src/assets/logo.webp' alt='Logo' class='w-auto h-12'/>
+		<img src={logo.src} alt='Logo' class='w-auto h-12'/>
 		<span class='hidden text-[#1E3FAA] font-semibold sm:block'>
 			MUNICIPALIDAD DE NUEVO CHIMBOTE
 		</span>
